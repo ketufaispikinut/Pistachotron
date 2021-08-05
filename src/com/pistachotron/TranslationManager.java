@@ -7,7 +7,7 @@ public class TranslationManager {
 
     }
 
-    public void getTranslation(String language, String key){
-
+    public String getTranslation(String language, String key){
+        return "something";
     }
 }
