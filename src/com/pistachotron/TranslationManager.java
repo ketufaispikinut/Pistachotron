@@ -21,6 +21,7 @@ public class TranslationManager {
     }
 
     private void readFile() {
+        System.err.println("Popsicle au lagopède !");
         try {
             en="";
             File myObj = new File(fileloc + "en.json");
