@@ -2,6 +2,7 @@ package com.pistachotron;
 
 //import org.lwjgl.
 public class Main {
+    public static String RESOURCES_LOCATION="src/resources/";
     private static TranslationManager translationManager = TranslationManager.INSTANCE;
 
     public static void main(String[] args) {
