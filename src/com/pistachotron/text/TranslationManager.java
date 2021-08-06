@@ -1,7 +1,7 @@
-package com.pistachotron;
+package com.pistachotron.text;
 
+import com.pistachotron.Main;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -66,7 +66,13 @@ public class TranslationManager {
                         Parser.parse(fr);
                     }
             JSONObject JsonObject=(JSONObject) obj;
-            return (String) JsonObject.get(key);
+                    if(JsonObject.containsKey(key)){
+                        return (String) JsonObject.get(key);
+                    }
+                    else{
+                        return key;
+                    }
+
 
         }
         catch(ParseException e){
