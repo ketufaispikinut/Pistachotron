@@ -11,7 +11,8 @@ import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
-
+import java.net.*;
+import java.io.*;
 public class ClientGame {
 
     // The window handle
