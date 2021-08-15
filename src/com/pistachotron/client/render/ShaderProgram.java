@@ -4,6 +4,8 @@ package com.pistachotron.client.render;
 import java.nio.FloatBuffer;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.pistachotron.debug.Log;
 import org.joml.Matrix4f;
 import static org.lwjgl.opengl.GL20.*;
 import org.lwjgl.system.MemoryStack;
@@ -32,6 +34,7 @@ public class ShaderProgram {
             throw new Exception("Could not find uniform: " + uniformName);
         }
         uniforms.put(uniformName, uniformLocation);
+        Log.debug("Uniform ["+uniformName+"] Was Created");
     }
 
     public void setUniform(String uniformName, Matrix4f value) {
@@ -40,6 +43,7 @@ public class ShaderProgram {
             glUniformMatrix4fv(uniforms.get(uniformName), false,
                     value.get(stack.mallocFloat(16)));
         }
+        Log.debug("Uniform ["+uniformName+"] Was Setted");
     }
 
     public void createVertexShader(String shaderCode) throws Exception {

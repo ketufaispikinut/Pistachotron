@@ -46,6 +46,7 @@ public class Render {
 
     public void init(Window window) throws Exception {
         // Create shader
+        //glfwInit();
         shaderProgram = new ShaderProgram();
         Log.debug("Loading Shader Files");
         //Log.debug(Utils.loadResource(Utils.getPath("shader/vertex.vs")));
@@ -72,6 +73,8 @@ public class Render {
     }
 
     public void render(Window window, Renderable[] gameItems) {
+        //glfwMakeContextCurrent(window.windowHandle);
+        //GL.createCapabilities();
         clear();
 
         if (window.isResized()) {

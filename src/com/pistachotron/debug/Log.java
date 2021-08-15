@@ -7,7 +7,7 @@ public class Log {
     public boolean activated=true;
 
     public static void debug(String debug){
-        INSTANCE.write(new Date().toString()+" - "+debug);
+        INSTANCE.write(new Date()+" - "+debug);
     }
     public static void setActive(boolean cur){
         INSTANCE.activated=cur;

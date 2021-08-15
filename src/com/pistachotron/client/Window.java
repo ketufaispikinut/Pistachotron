@@ -22,7 +22,7 @@ public class Window {
 
     private int height;
 
-    private long windowHandle;
+    public long windowHandle;//private
 
     private boolean resized;
 
@@ -85,6 +85,7 @@ public class Window {
 
         // Make the OpenGL context current
         glfwMakeContextCurrent(windowHandle);
+        GL.createCapabilities();
 
         if (isvSync()) {
             // Enable v-sync
@@ -94,7 +95,6 @@ public class Window {
         // Make the window visible
         glfwShowWindow(windowHandle);
 
-        GL.createCapabilities();
 
         // Set the clear color
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
